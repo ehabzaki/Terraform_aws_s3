@@ -60,7 +60,6 @@ module "s3-week" {
 
 }
 
-
 module "s3-day" {
     source = "./modules/s3/"
       bucket   = "berlin-day"
@@ -84,9 +83,6 @@ module "s3-hour" {
       }
     }
   }
-
-
-
 
   lifecycle_rule = [
     {

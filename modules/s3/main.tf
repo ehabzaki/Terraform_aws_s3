@@ -5,7 +5,6 @@ terraform {
 resource "aws_s3_bucket" "b" {
   bucket =  var.bucket
   acl    =  var.acl 
- 
 
  # server_side_encryption_configuration
   dynamic "server_side_encryption_configuration" {
@@ -80,8 +79,6 @@ resource "aws_s3_bucket" "b" {
       }
     }
   }
-
-
 
   dynamic "versioning" {
     for_each = var.versioning  == null ? [] : var.versioning
